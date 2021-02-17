@@ -1,0 +1,64 @@
+@font-face
+{
+    font-family: LexendMega;
+    src: url("assets/fonts/LexendMega.ttf");
+}
+
+@font-face
+{
+    font-family: Poppins;
+    src: url("assets/fonts/Poppins.ttf");
+}
+
+body
+{
+    font-family: Poppins, sans-serif;
+    color: white;
+    user-select: none;
+    margin: 0;
+}
+
+.main
+{
+    display: grid;
+    grid-template-columns: 30% 1fr 1fr;
+    position: absolute;
+    border-radius: 15px;
+    background: url("assets/background.png") center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.left
+{
+    grid-column: 0/1;
+    background-color: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    padding: 20px;
+}
+
+#minimize, #close
+{
+    font-family: LexendMega, sans-serif;
+    font-size: 30px;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, .5);
+    transition-duration: 100ms;
+    outline: none;
+}
+
+#minimize
+{
+    right: 40px;
+}
+
+#minimize:hover, #close:hover
+{
+    color: white;
+}
