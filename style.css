@@ -21,7 +21,8 @@ body
 .main
 {
     display: grid;
-    grid-template-columns: 30% 1fr 1fr;
+    grid-template-columns: 250px 1fr 250px;
+    grid-template-rows: 1fr;
     position: absolute;
     border-radius: 15px;
     background: url("assets/background.png") center;
@@ -37,6 +38,48 @@ body
     backdrop-filter: blur(5px);
     text-align: center;
     padding: 20px;
+    border-radius: 15px 0 0 15px;
+}
+
+.center
+{
+    text-align: center;
+    display: grid;
+    grid-template-rows: 3em;
+    align-content: center;
+}
+
+.right
+{
+    grid-column: 3/4;
+    display: grid;
+    align-content: end;
+    background-color: rgba(0, 0, 0, .1);
+    text-align: center;
+    backdrop-filter: blur(5px);
+    border-radius: 0 15px 15px 0;
+}
+
+#no-news
+{
+    grid-row: 1/2;
+    line-height: 1em;
+    color: #aaa;
+    font-weight: lighter;
+}
+
+button
+{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgba(35, 35, 35, .7);
+    backdrop-filter: blur(15px);
+    margin: 0 10px 10px;
+    border: none;
+    border-radius: 15px;
+    height: 3em;
+    outline: none;
 }
 
 #minimize, #close
@@ -44,13 +87,16 @@ body
     font-family: LexendMega, sans-serif;
     font-size: 30px;
     position: absolute;
+    margin: initial;
+    height: initial;
+    width: initial;
     right: 5px;
     top: 0;
+    bottom: initial;
     background: none;
-    border: none;
+    backdrop-filter: none;
     color: rgba(255, 255, 255, .5);
     transition-duration: 100ms;
-    outline: none;
 }
 
 #minimize

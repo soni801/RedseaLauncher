@@ -8,21 +8,21 @@ function createWindow ()
     {
         width: 1000,
         height: 600,
+        minWidth: 900,
+        minHeight: 500,
         frame: false,
         transparent: true,
-        icon: "assets/icon.png",
+        icon: __dirname + "/assets/icon.png",
         webPreferences:
         {
             nodeIntegration: true,
-            enableRemoteModule: true
+            enableRemoteModule: true,
+            devTools: false
         }
     });
 
-    // and load the index.html of the app.
+    // Load the index.html of the app.
     mainWindow.loadFile('index.html').then(() => console.log("Content Loaded"));
-
-    // Open the DevTools.
-    // mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
